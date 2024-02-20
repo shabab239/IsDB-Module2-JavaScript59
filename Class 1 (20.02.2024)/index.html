@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <body>
+        <button onclick="setRandomColor()" onmouseenter="this.style.backgroundColor = '#e74c3c'"
+            onmouseleave="this.style.backgroundColor = ''">
+            Set Random Color
+        </button>
+
+        <br> <br>
+        <button onclick="takeName()">Click Me Yo!</button>
+    </body>
+
+    <script>
+
+        function setRandomColor() {
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+
+            // alert('rgb(' + r + ',' + g + ',' + b + ')');
+
+            document.body.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+        }
+
+        function takeName() {
+            let input = prompt('Sup Mate?');
+            let welcomeMessage = document.createElement('h1');
+            welcomeMessage.innerHTML = 'Welcome <span style="color: red">' + input + '</span>';
+            document.body.appendChild(welcomeMessage);
+        }
+
+
+        // document.write('<h1>HOLY SHOT MATE LOL</h1>');
+    </script>
+</body>
+
+</html>

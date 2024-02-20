@@ -1,0 +1,19 @@
+.carousel-item {
+    height: 400px;
+}
+
+#intro-content p {
+    text-align: justify;
+}
+
+body{
+    background-color: rgb(27, 25, 25);
+}
+
+h1, h2, h3, h4, h5, h6, span, p, label{
+    color: white;
+}
+
+#about p{
+    text-align: justify;
+}
