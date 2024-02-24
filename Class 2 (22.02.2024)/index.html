@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TEST</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="text-center">YOLO CALCULATOR</h1>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-8 offset-2">
+                    <label class="h3">Number 1</label>
+                    <input class="form-control" type="number" id="number1">
+                    <br>
+                    <label class="h3">Number 2</label>
+                    <input class="form-control" type="number" id="number2">
+                </div>
+            </div>
+            <div class="row mt-3 text-center">
+                <div class="col-md-2 offset-2">
+                    <button class="btn btn-success" onclick="doSum()">Sum</button>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-warning" onclick="doSubstract()">Substraction</button>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-info" onclick="doMultiply()">Multiply</button>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-danger" onclick="doDivise()">Divise</button>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <div class="modal fade" id="calculationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: black;">Result</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="calculationModalBody"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Thanks Mate!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        function doSum() {
+            let number1 = parseFloat(document.getElementById('number1').value);
+            let number2 = parseFloat(document.getElementById('number2').value);
+            show(number1 + number2);
+        }
+
+        function doSubstract() {
+            let number1 = parseFloat(document.getElementById('number1').value);
+            let number2 = parseFloat(document.getElementById('number2').value);
+            show(number1 - number2);
+        }
+
+        function doMultiply() {
+            let number1 = parseFloat(document.getElementById('number1').value);
+            let number2 = parseFloat(document.getElementById('number2').value);
+            show(number1 * number2);
+        }
+
+        function doDivise() {
+            let number1 = parseFloat(document.getElementById('number1').value);
+            let number2 = parseFloat(document.getElementById('number2').value);
+            show(number1 / number2);
+        }
+
+        function show(result) {
+            let calculationModal = new bootstrap.Modal(document.getElementById('calculationModal'), {});
+            document.getElementById('calculationModalBody').innerText = result;
+            calculationModal.show();
+        }
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
