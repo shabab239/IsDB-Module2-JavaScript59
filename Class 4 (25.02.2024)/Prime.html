@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime (Two Logics)</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // Logic - 1
+        let number = prompt('Enter Number to check if it\'s Prime');
+        let result = 'The number is Prime';
+
+        for (let i = 2; i < number; i++) {
+            if (number % i == 0) {
+                result = 'The number is not Prime';
+                break;
+            }
+        }
+        alert(result);
+        
+        // Logic - 2
+        /* let number = prompt('Enter Number to check if it\'s Prime');
+        let count = 0;
+
+        for (let i = 1; i <= number; i++) {
+            if (number % i == 0) {
+                count++;
+            }
+        }
+        if (count == 2) {
+            alert("The number is Prime");
+        } else {
+            alert("The number is not Prime");
+        } */
+        
+
+    </script>
+</body>
+
+</html>

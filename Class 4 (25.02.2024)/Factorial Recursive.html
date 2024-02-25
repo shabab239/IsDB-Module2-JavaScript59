@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Recursive</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        (function f() {
+            let number = prompt('Enter Number');
+            let factorial = 1;
+
+            if (number < 1) {
+                alert('Please enter positive number');
+                f();
+            } else {
+                for (let i = number; i > 0; i++) {
+                    factorial *= number;
+                }
+                alert(factorial);
+            }
+        })();
+
+    </script>
+</body>
+
+</html>
