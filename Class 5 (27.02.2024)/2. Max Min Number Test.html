@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max/Min Number</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // Logic 1
+        /* let num1 = parseFloat(prompt("Number 1"));
+        let num2 = parseFloat(prompt("Number 2"));
+        let num3 = parseFloat(prompt("Number 3"));
+        
+        let maxNumber = 0;
+        let minNumber = 0;
+ 
+        if(num1 > num2 && num1 > num3) {
+            maxNumber = num1;
+        } else if(num2 > num3 && num2 > num3) {
+            maxNumber = num2;
+        } else {
+            maxNumber = num3;
+        }
+ 
+        if(num1 < num2 && num1 < num3) {
+            minNumber = num1;
+        } else if(num2 < num3 && num2 < num3) {
+            minNumber = num2;
+        } else {
+            minNumber = num3;
+        }
+ 
+        alert('Max Number: ' + maxNumber + '   |   Min Number: ' + minNumber);  */
+
+
+        // Logic 2
+        let array = [];
+        for (let i = 0; i < 6; i++) {
+            array.push(parseInt(prompt("Enter Number " + (i + 1))));
+
+            /*
+            Previous Line Broken Down into Parts:
+
+            let number = prompt("Enter Number " + (i + 1));
+            let integerNumber = parseInt(number);
+            array.push(integerNumber);
+            */
+        }
+
+        array.sort(function (a, b) {
+            return b - a;
+        });
+
+        alert('Max Number: ' + array[0] + '   |   Min Number: ' + array[array.length - 1]);
+    </script>
+</body>
+
+</html>

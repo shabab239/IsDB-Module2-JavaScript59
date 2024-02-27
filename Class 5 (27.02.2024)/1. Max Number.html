@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Number</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // Logic 1
+        /*         let num1 = parseFloat(prompt("Number 1"));
+                let num2 = parseFloat(prompt("Number 2"));
+                let num3 = parseFloat(prompt("Number 3"));
+                
+                let maxNumber = 0;
+        
+                if(num1 > num2 && num1 > num3) {
+                    maxNumber = num1;
+                } else if(num2 > num3 && num2 > num3) {
+                    maxNumber = num2;
+                } else {
+                    maxNumber = num3;
+                }
+        
+                alert(maxNumber); */
+
+
+        // Logic 2
+        let array = [];
+        for (let i = 0; i < 3; i++) {
+            array.push(parseInt(prompt("Enter Number " + (i + 1))));
+        }
+
+        array.sort(function (a, b) { //'JS sort() or reverse()' converts items to string and then compares, so custom method is used.
+            return b - a;
+        });
+
+        alert(array[0]);
+    </script>
+</body>
+
+</html>

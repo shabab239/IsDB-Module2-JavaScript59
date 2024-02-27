@@ -12,20 +12,20 @@
 
     <script>
 
-        (function f() {
+        (function processFactorial() {
             let number = prompt('Enter Number');
             let factorial = 1;
 
             if (number < 1) {
                 alert('Please enter positive number');
-                f();
+                processFactorial(); // Recall the function if user inputs non-positive numbers
             } else {
                 for (let i = number; i > 0; i--) {
                     factorial *= i;
                 }
                 alert(factorial);
             }
-        })();
+        })(); // Self-calling function
 
     </script>
 </body>
