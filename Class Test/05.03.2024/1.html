@@ -18,14 +18,31 @@
     <script>
 
 
-        let length = parseInt(prompt('Please Enter The Amount of Numbers You Wanna Add to The Array.'));
+        (function f() {
+            let input = prompt('Please Enter The Amount of Numbers You Wanna Add to The Array.');
 
-        let array = [];
-        for (let i = 0; i < length; i++) {
-            array.push(parseInt(prompt('Please Enter Number ' + (i + 1))));
-        }
+            if(isNaN(input)) {
+                alert('Please Enter a Number');
+                f();
+                return;
+            }
 
-        document.write('<h1>' + array + '</h1>');
+            let length = parseInt(input);
+
+            if(length < 1) {
+                alert('Please Enter a Number Greater Than 0');
+                f();
+                return;
+            }
+
+
+            let array = [];
+            for (let i = 0; i < length; i++) {
+                array.push(parseInt(prompt('Please Enter Number ' + (i + 1))));
+            }
+
+            document.write('<h1>' + array + '</h1>');
+        })();
 
 
     </script>
