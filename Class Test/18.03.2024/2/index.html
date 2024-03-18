@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email</title>
+</head>
+<body>
+    
+
+    <script>
+        let email = prompt('Enter Email');
+
+        let pattern = /[@\.]/g;
+        if(pattern.test(email)){
+            alert('Email Address is Correct');
+        } else {
+            alert('Email Address is Wrong');
+        }
+    </script>
+</body>
+</html>
