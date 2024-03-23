@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+</head>
+
+<body>
+
+
+    <script>
+        (
+            function f() {
+                let userInput = parseInt(prompt('Please Enter The Number'));
+
+                if (isNaN(userInput) || userInput < 1) {
+                    alert('Please Enter a positive Number');
+                    f();
+                    return;
+                }
+
+                if (userInput == 1) {
+                    alert('The Number is Not Prime');
+                    return;
+                }
+
+                let result = 'Prime';
+                for (let i = 2; i < userInput; i++) {
+                    if (userInput % i == 0) {
+                        result = 'Not Prime';
+                        break;
+                    }
+                }
+                alert('The Number is ' + result);
+            }
+        )();
+    </script>
+
+</body>
+
+</html>

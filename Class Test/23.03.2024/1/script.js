@@ -2,8 +2,6 @@ function submitForm(event) {
     event.preventDefault();
 
     let name = document.getElementById('name').value;
-    let contact = document.getElementById('contact').value;
-    let remarks = document.getElementById('remarks').value;
     let genderElement = document.querySelector('input[name="gender"]:checked');
     let courseElementArray = document.querySelectorAll('input[name="course"]:checked');
     let location = document.getElementById('location').value;
@@ -16,25 +14,6 @@ function submitForm(event) {
         setError(errorName, 'Max 50 Characters');
     } else {
         removeError(errorName);
-    }
-
-    let errorContact = document.getElementById('error-contact');
-    if (contact == '') {
-        setError(errorContact, 'Please Enter Your Mobile Number');
-    } else {
-        let regex = /^\d{11}$/;
-        if(!regex.test(contact)){
-            setError(errorContact, 'Enter 11 Digit Mobile Number');
-        } else {
-            removeError(errorContact);
-        }
-    }
-
-    let errorRemarks = document.getElementById('error-remarks');
-    if(errorRemarks != '' && errorRemarks.length > 200) {
-        setError(errorRemarks, 'Max 200 Characters');
-    } else {
-        removeError(errorRemarks);
     }
 
     let errorGender = document.getElementById('error-gender');
@@ -77,8 +56,6 @@ function submitForm(event) {
 
     if(!haveInputErrors){
         let output = 'Name: ' + name + '\n';
-        output += 'Contact: ' + contact + '\n';
-        output += 'Remarks: ' + (remarks == '' ? '---' : remarks) + '\n';
         output += 'Gender: ' + gender + '\n';
         output += 'Course(s): ' + courseValueArray.join(', ') + '\n';
         output += 'Location: ' + location + '\n';
@@ -94,6 +71,7 @@ function setError(element, message){
     element.style.display = 'block';
 }
 
+//TODO this needs to be fixed later
 function removeError(element){
     element.innerHTML = '';
     element.style.display = 'none';
