@@ -71,7 +71,6 @@ function setError(element, message){
     element.style.display = 'block';
 }
 
-//TODO this needs to be fixed later
 function removeError(element){
     element.innerHTML = '';
     element.style.display = 'none';

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sort</title>
+
+</head>
+
+<body>
+    <script>
+        (
+            function bubbleSort() {
+                let length = parseInt(prompt('Enter How Many Numbers You Wanna Sort'));
+
+                if (isNaN(length)) {
+                    alert('Please Enter Positive Number');
+                    bubbleSort();
+                    return;
+                }
+
+                let arrayToBeSorted = [];
+                for (let i = 0; i < length; i++) {
+                    let number = parseInt(prompt('Enter Number ' + (i + 1)));
+                    if (!isNaN(number)) {
+                        arrayToBeSorted.push(number);
+                    }
+                }
+
+                for (let i = 0; i < arrayToBeSorted.length; i++) {
+                    for (let j = 0; j < arrayToBeSorted.length - i - 1; j++) {
+                        if(arrayToBeSorted[j] > arrayToBeSorted[j + 1]){
+                            let temp = arrayToBeSorted[j];
+                            arrayToBeSorted[j] = arrayToBeSorted[j + 1];
+                            arrayToBeSorted[j + 1] = temp;
+                        }
+                    }
+                }
+
+                alert(arrayToBeSorted);
+            }
+        )();
+    </script>
+</body>
+
+</html>

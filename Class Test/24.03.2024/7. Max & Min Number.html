@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max and Min</title>
+
+</head>
+
+<body>
+    <script>
+        (
+            function maxAndMin() {
+                let length = parseInt(prompt('Enter How Many Numbers You Wanna Check'));
+
+                if (isNaN(length)) {
+                    alert('Please Enter Positive Number');
+                    maxAndMin();
+                    return;
+                }
+
+                let arrayToBeSorted = [];
+                for (let i = 0; i < length; i++) {
+                    let number = parseInt(prompt('Enter Number ' + (i + 1)));
+                    if (!isNaN(number)) {
+                        arrayToBeSorted.push(number);
+                    }
+                }
+
+                arrayToBeSorted.forEach(
+                    function(a, b) {
+                        return b - a;
+                    }
+                );
+
+                alert("Max Number: " + arrayToBeSorted[arrayToBeSorted.length - 1] + ", Min Number: " + arrayToBeSorted[0]);
+            }
+        )();
+    </script>
+</body>
+
+</html>
