@@ -13,7 +13,13 @@
     <script>
 
         // Logic - 1
-        let number = prompt('Enter Number to check if it\'s Prime');
+        let number = parseInt(prompt('Enter Number to check if it\'s Prime'));
+
+        if (number == 1) {
+            alert('The Number is Not Prime');
+            return;
+        }
+
         let result = 'The number is Prime';
 
         for (let i = 2; i < number; i++) {
@@ -23,7 +29,7 @@
             }
         }
         alert(result);
-        
+
         // Logic - 2
         /* let number = prompt('Enter Number to check if it\'s Prime');
         let count = 0;
@@ -38,7 +44,7 @@
         } else {
             alert("The number is not Prime");
         } */
-        
+
 
     </script>
 </body>
